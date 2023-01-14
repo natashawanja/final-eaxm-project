@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" type="text/css" href="shopping.css">
+  <style type="text/css">
+    .container {
+      margin: 0%;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="productmenu.html">Menu</a>
+    <a href="contactus.html" style="float:left">Contact</a>
+  </div>
+
+  <div id="notification"></div>
+  <center>
+    <h1>Here are the makeup products we sell</h1>
+  </center>
+
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="images/mkup2.jpg" alt="makeup" style="width:100%" height="400px">
+          <div class="container">
+            <h2 class="buy_item">Eyeshadow</h2>
+            <p class="title" id="eye-price">$50</p>
+            <!-- add revlon description -->
+            <p id="eye-descrption">This a premium brand</p>
+            <button class="buyNow"> Buy now</button>
+          </div>
+          <select name="" id="eyeshadow" onchange="changeFunction()">
+            <option value="revlon"> Revlon</option>
+            <option value="mac">Mac</option>
+            <option value="sleek">Sleek</option>
+          </select>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="images/mkup3.jpg" alt="makeup" style="width:100%" height="400px">
+          <div class="container">
+            <h2 class="buy_item">Concealer</h2>
+            <p class="title" id="concelar-price">$35</p>
+            <p id="concelar-description">This a premium brand</p>
+            <button class="buyNow"> Buy now</button>
+          </div>
+          <select name="" id="concelar" onchange="replaceFunction()">
+            <option value="revlon">Revlon</option>
+            <option value="mac">Mac</option>
+            <option value="sleek">Sleek</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img src="images/mkup4.jpg" alt="toy" style="width:100%" height="400px">
+          <div class="container">
+            <h2 class="buy_item">Lipstick</h2>
+            <p class="title" id="lipstick-price">$40</p>
+            <p id="lipstick-description">This a premium brand</p>
+            <button class="buyNow"> Buy now</button>
+          </div>
+          <select name="" id="lipstick" onchange="moveFunction()">
+            <option value="revlon"> Revlon</option>
+            <option value="mac">Mac</option>
+            <option value="sleek">Sleek</option>
+          </select>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="images/mkup5.jpg" alt="toy" style="width:100%" height="400px">
+          <div class="container">
+            <h2 class="buy_item">Powder</h2>
+            <p class="title" id="powder-price">$55</p>
+            <p id="powder-description">This a premium brand</p>
+            <button class="buyNow"> Buy now</button>
+          </div>
+          <select name="" id="powder" onchange="nextFunction()">
+            <option value="revlon"> Revlon</option>
+            <option value="mac">Mac</option>
+            <option value="sleek">Sleek</option>
+          </select>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="images/mkup6.jpg" alt="toy" style="width:100%" height="400px">
+          <div class="container">
+            <h2 class="buy_item">Mascara</h2>
+            <p class="title" id="mascara-price">$547</p>
+            <p id="mascara-description">This a premium brand</p>
+            <button class="buyNow"> Buy now</button>
+          </div>
+          <select name="" id="mascara" onchange="forwardFunction()">
+            <option value="revlon"> Revlon</option>
+            <option value="mac">Mac</option>
+            <option value="sleek">Sleek</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div>
+    <h2 style="text-align: center;">BASKET</h2>
+  </div>
+  <div id="pay-details-cont">
+    <form action="" id="payForm">
+      <input type="radio" name="visamaster" id="visa" value="visa">
+      <label for="visa">Visa</label>
+      <input type="radio" name="visamaster" id="master" value="master">
+      <label for="visa">master</label>
+      <p>
+        <label for="cardName1"> Name on card</label>
+        <input type="text" name="" id="cardnameN1" maxlength="15">
+      
+        <input type="text" name="" id="cardnameN2" maxlength="15">
+      
+        <input type="text" name="" id="cardnameN3" maxlength="15">
+      </p>
+      <p>
+        <label for="expiry">Expiry Date</label>
+        Month:
+        <select name="" id="month">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">5</option>
+          <option value="4">6</option>
+          <option value="4">7</option>
+          <option value="4">8</option>
+          <option value="4">9</option>
+          <option value="4">10</option>
+          <option value="4">11</option>
+          <option value="4">12</option>
+        </select>
+        Year:
+        <select name="" id="year">
+          <option value="2023">2023</option>
+          <option value="2304">2036</option>
+          <option value="2015">2015</option>
+        </select>
+      </p>
+      <label for="cvv">CVV</label>
+      <!-- <input type="number" name="" id="cvv" min="100" max="999"> -->
+      <input type="text" inputmode="numeric" pattern="[0-9]*" id="cvvf">
+    </form>
+    <table id="items-totals">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>#<span id="qty"></span></td>
+          <td>$<span id="amount"></span></td>
+        </tr>
+      </thead>
+    </table>
+    <div>
+      <button id="check-clear">Clear Cart</button>
+      <button onclick="validatePaymentForm()">Checkout</button>
+    </div>
+  </div>
+  <div id="cost-container">
+    <div class="product-price">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="items-total">
+
+        </tbody>
+      </table>
+    </div>
+    <div id="costForm" hidden>
+      <table>
+
+        <tr>
+          <th>Total Cost</th>
+          <td id="total-cost"></td>
+        </tr>
+        <tr>
+          <th>Delivery Cost</th>
+          <td id="delivery-cost"></td>
+        </tr>
+        <tr>
+          <th>Net Total</th>
+          <td id="net-total"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <script src="cart.js"></script>
+</body>
+
+</html>

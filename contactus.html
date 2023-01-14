@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <link rel="stylesheet" type="text/css" href="contact.css">
+   
+    
+    <title>Contact Us form</title>
+    <script src="cart.js"></script>
+  </head>
+<body>
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="productmenu.html">Menu</a>
+    <a href="contactus.html" style="float:left">Contact</a>
+ </div>
+  <br>
+  <br>
+  <form class="contact-form" onsubmit="return validateForm()" id="contactForm">
+    <h2>Contact form</h2>
+    <label>
+      Name:
+      <input type="text" name="name" id="name" required>
+    </label>
+    <br>
+    <label>
+      Surname:
+      <input type="text" name="surname" id="surname" required>
+    </label>
+    <br>
+    <label>
+      Additional comments:
+      <textarea name="comments" id="comments" required></textarea>
+    </label>
+    <br>
+    <button type="submit" class="button">Send</button>
+  </form>
+</body>
+</html>
