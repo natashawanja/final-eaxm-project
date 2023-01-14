@@ -1,0 +1,66 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Define the styling for each card */
+  .card {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    box-shadow: 2px 2px 3px #666;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Define the styling for the image in each card */
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Define the styling for the description in each card */
+  .card .description {
+    padding: 20px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  /* Define the styling for the search button in each card */
+  .card .search-btn {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(223, 191, 177);
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: white;
+  }
+  
+  .topnav a:hover:not(.active) {
+    background-color: rgb(211, 194, 194);
+  }
+  
+  .active {
+    background-color: #ecd1e0;
+  }
